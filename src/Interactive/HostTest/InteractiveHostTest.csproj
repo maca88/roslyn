@@ -23,6 +23,7 @@
     <ProjectReference Include="..\..\Test\Utilities\Desktop\TestUtilities.Desktop.csproj" />
     <ProjectReference Include="..\..\Test\Utilities\Portable\TestUtilities.csproj" />
     <ProjectReference Include="..\..\Workspaces\Core\Desktop\Workspaces.Desktop.csproj" />
+    <ProjectReference Include="..\..\Workspaces\Core\MSBuild\Workspaces.MSBuild.csproj" />
     <ProjectReference Include="..\..\Workspaces\Core\Portable\Workspaces.csproj" />
     <ProjectReference Include="..\..\EditorFeatures\CSharp\CSharpEditorFeatures.csproj" />
     <ProjectReference Include="..\EditorFeatures\Core\InteractiveEditorFeatures.csproj" />
