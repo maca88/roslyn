@@ -19,6 +19,7 @@
     <ProjectReference Include="..\..\..\..\src\Compilers\VisualBasic\Portable\BasicCodeAnalysis.vbproj" />
     <ProjectReference Include="..\..\..\..\src\Workspaces\Core\Portable\Workspaces.csproj" />
     <ProjectReference Include="..\..\..\..\src\Workspaces\Core\Desktop\Workspaces.Desktop.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Workspaces\Core\MSBuild\Workspaces.MSBuild.csproj" />
     <ProjectReference Include="..\..\..\..\src\Workspaces\CSharp\Portable\CSharpWorkspace.csproj" />
     <ProjectReference Include="..\..\..\..\src\Workspaces\VisualBasic\Portable\BasicWorkspace.vbproj" />
     <Reference Include="System" />
