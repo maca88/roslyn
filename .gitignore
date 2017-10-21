@@ -184,3 +184,10 @@ $RECYCLE.BIN/
 
 # JetBrains Rider
 .idea/
+**/Dlls/**
+**/netcoreapp2.0/
+**/net46/
+**/net461/
+**/net462/
+*.nupkg
+

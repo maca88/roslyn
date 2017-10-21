@@ -116,6 +116,7 @@ string[] RedistPackageNames = {
     "Microsoft.CodeAnalysis.VisualBasic.Scripting",
     "Microsoft.CodeAnalysis.VisualBasic.Workspaces",
     "Microsoft.CodeAnalysis.Workspaces.Common",
+    "Microsoft.CodeAnalysis.Workspaces.MSBuild",
     "Microsoft.VisualStudio.LanguageServices",
 };
 
@@ -170,7 +171,6 @@ var PackagesNotBuiltOnCore = new HashSet<string>
      "Microsoft.CodeAnalysis.Remote.ServiceHub",
      "Microsoft.CodeAnalysis.Remote.Workspaces",
      "Microsoft.CodeAnalysis.VisualBasic.Features",
-     "Microsoft.CodeAnalysis.Workspaces.Common",
      "Microsoft.Net.Compilers",
      "Microsoft.VisualStudio.IntegrationTest.Utilities",
      "Microsoft.VisualStudio.LanguageServices",

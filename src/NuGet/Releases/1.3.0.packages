@@ -16,6 +16,7 @@
   <package id="Microsoft.CodeAnalysis.VisualBasic.Features" />
   <package id="Microsoft.CodeAnalysis.VisualBasic.Workspaces" />
   <package id="Microsoft.CodeAnalysis.Workspaces.Common" />
+  <package id="Microsoft.CodeAnalysis.Workspaces.MSBuild" />
   <package id="Microsoft.DiaSymReader.PortablePdb" />
   <package id="Microsoft.Net.Compilers" />
   <package id="Microsoft.Net.Compilers.netcore" />

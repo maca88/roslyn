@@ -397,7 +397,8 @@ namespace Microsoft.CodeAnalysis.MSBuild
                     }
 
                     Debug.Assert(encoding != null);
-                    using (var writer = new StreamWriter(fullPath, append: false, encoding: encoding))
+                    using (var fileStream = new FileStream(fullPath, FileMode.Create, FileAccess.Write))
+                    using (var writer = new StreamWriter(fileStream, encoding))
                     {
                         newText.Write(writer);
                     }
