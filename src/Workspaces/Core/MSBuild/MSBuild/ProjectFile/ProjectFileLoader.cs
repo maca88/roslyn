@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Runtime.InteropServices;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -54,11 +55,15 @@ namespace Microsoft.CodeAnalysis.MSBuild
         private static async Task<LoadedProjectInfo> LoadProjectAsync(string path, IDictionary<string, string> globalProperties, CancellationToken cancellationToken)
         {
             globalProperties = globalProperties ?? ImmutableDictionary<string, string>.Empty;
-
+#if NET46
+            var netFramework = true;
+#else
+            var netFramework = RuntimeInformation.FrameworkDescription.StartsWith(".NET Framework");
+#endif
             var properties = new Dictionary<string, string>(globalProperties)
             {
                 { "DesignTimeBuild", "true" }, // this will tell msbuild to not build the dependent projects
-                { "BuildingInsideVisualStudio", "true" }, // this will force CoreCompile task to execute even if all inputs and outputs are up to date
+                { "BuildingInsideVisualStudio", netFramework ? "true" : "false" }, // this will force CoreCompile task to execute even if all inputs and outputs are up to date
                 { "BuildProjectReferences", "false" },
                 { "ProvideCommandLineArgs", "true" }, // retrieve the command-line arguments to the compiler
                 { "SkipCompilerExecution", "true" }, // don't actually run the compiler
